@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog de Programación</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="xml.html">XML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="json.html">JSON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <button class="btn btn-dark" id="sidebarToggle">Mostrar/Ocultar Sidebar</button>
+      </div>
+    </nav>
+      <div class="sidebar">
+        <h5>Categoría</h5>
+        <ul>
+          <li><a href="#" class="btn d-block">Programación web</a></li>
+          <li><a href="#" class="btn d-block">Desarrollo móvil</a></li>
+          <li><a href="#" class="btn d-block">Inteligencia artificial</a></li>
+        </ul>
+        <h5>Últimos posts</h5>
+        <ul>
+          <li><a href="xml.html" class="btn d-block">Introducción a XML</a></li>
+          <li><a href="json.html" class="btn d-block">Introducción a JSON</a></li>
+        </ul>
+        <h5>Síguenos en nuestras redes sociales</h5>
+        <ul>
+          <a href="https://www.facebook.com/campusfp/"><img src="logo_facebook_1.webp" class="simg" alt="Facebook" /></a>
+          <a href="https://twitter.com/Campus_FP"><img src="x.avif" class="simg" alt="Twitter" /></a>
+          <a href="https://www.instagram.com/campusfp_/"><img src="logo_insta.webp" class="simg" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/company/10575264/"><img src="logo_linkedin.png" class="simg" alt="LinkedIn" /></a>
+        </ul>
+      </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Artículo sobre JSON</h1>
+        <p>JSON (acrónimo de JavaScript Object Notation, 'notación de objeto de JavaScript') es un formato de texto sencillo para el intercambio de datos. Se trata de un subconjunto de la notación literal de objetos de JavaScript, aunque, debido a su amplia adopción como alternativa a XML, se considera un formato independiente del lenguaje.</p>
+
+        <h2 id="historia">Historia</h2>
+            <p>La historia de JSON se remonta a principios de la década de 2000, cuando se desarrolló como una alternativa a XML (eXtensible Markup Language) para el intercambio de datos entre sistemas. Antes de JSON, XML era el formato de intercambio de datos más utilizado, pero se consideraba engorroso y difícil de analizar. JSON, por otro lado, fue diseñado para ser fácil de leer y escribir, lo que lo convierte en una opción más atractiva para los desarrolladores.</p>
+            <p></p>
+
+        <h2 id="normas">Normas de Uso y Sintaxis</h2>
+        <p>Un objeto JSON está rodeado por llaves {}. Los pares nombre-valor se agrupan por un colon (:) y separados por una coma (,). Un array comienza con un corchete izquierdo y termina con un soporte derecho [ ]. Las comas finales y los ceros iniciales en un número están prohibidos. Los formatos octal y hexadecimal no están permitidos.</p>
+        <p>Los tipos de datos disponibles con JSON son:</p>
+        <li>Números: Se permiten números negativos y opcionalmente pueden contener parte fraccional separada por puntos. Ejemplo: <strong>123.456</strong></li>
+        <li>Cadenas: Representan secuencias de cero o más caracteres. Se ponen entre doble comilla y se permiten cadenas de escape. Ejemplo: <strong>"Hola"</strong></li>
+        <li>Booleanos: Representan valores booleanos y pueden tener dos valores: <strong>true</strong> y <strong>false</strong></li>
+        <li>null: Representan el valor nulo.</li>
+        <li>Array: Representa una lista ordenada de cero o más valores los cuales pueden ser de cualquier tipo. Los valores se separan por comas y el vector se mete entre corchetes. Ejemplo <strong>["juan","pedro","jacinto"]</strong></li>
+        <li>Objetos: Son colecciones no ordenadas de pares de la forma <strong>&lt;nombre&gt;:&lt;valor&gt;</strong> separados por comas y puestas entre llaves. El nombre tiene que ser una cadena entre comillas dobles. El valor puede ser de cualquier tipo. Ejemplo:</li>
+        <p><code>{ <br>
+          "departamento": 8,<br>
+          "nombredepto": "Ventas",<br>
+          "director": "Juan Rodríguez",<br>
+          "empleados": [<br>
+            {<br>
+              "nombre": "Pedro",<br>
+              "apellido": "Fernández"<br>
+            },<br>
+            {<br>
+              "nombre": "Jacinto",<br>
+              "apellido": "Benavente"<br>
+            } <br>
+          ] <br>
+        }</code>
+        </p>
+
+        <h2 id="aplicaciones">Aplicaciones Empresariales</h2>
+            <p>JSON se utiliza para enviar datos desde el servidor al cliente en el desarrollo de aplicaciones web. También se utiliza en servicios web y APIs para la comunicación entre el cliente y el servidor. Además, se utiliza para almacenar configuraciones y preferencias de usuario en muchas aplicaciones.</p>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">En este artículo</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#historia" class="btn d-block">Historia</a></li>
+              <li class="list-group-item"><a href="#normas" class="btn d-block">Normas de Uso y Sintaxis</a></li>
+              <li class="list-group-item"><a href="#aplicaciones" class="btn d-block">Aplicaciones Empresariales</a></li>
+              <li class="list-group-item"><a href="https://www.json.org/json-es.html" class="btn d-block">Web oficial de JSON</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.toggle('d-none');
+    });
+  </script>
+</body>
+
+</html>

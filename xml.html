@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Blog de Programación</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="xml.html">XML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="json.html">JSON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <button class="btn btn-dark" id="sidebarToggle">Mostrar/Ocultar Sidebar</button>
+      </div>
+      <div class="sidebar">
+        <h5>Categoría</h5>
+        <ul>
+          <li><a href="#" class="btn d-block">Programación web</a></li>
+          <li><a href="#" class="btn d-block">Desarrollo móvil</a></li>
+          <li><a href="#" class="btn d-block">Inteligencia artificial</a></li>
+        </ul>
+        <h5>Últimos posts</h5>
+        <ul>
+          <li><a href="xml.html" class="btn d-block">Introducción a XML</a></li>
+          <li><a href="json.html" class="btn d-block">Introducción a JSON</a></li>
+        </ul>
+        <h5>Síguenos en nuestras redes sociales</h5>
+        <ul>
+          <a href="https://www.facebook.com/campusfp/"><img src="logo_facebook_1.webp" class="simg" alt="Facebook" /></a>
+          <a href="https://twitter.com/Campus_FP"><img src="x.avif" class="simg" alt="Twitter" /></a>
+          <a href="https://www.instagram.com/campusfp_/"><img src="logo_insta.webp" class="simg" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/company/10575264/"><img src="logo_linkedin.png" class="simg" alt="LinkedIn" /></a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Artículo sobre XML</h1>
+        <p>El lenguaje de marcado extensible (XML) permite definir y almacenar datos de forma compartible. XML admite el intercambio de información entre sistemas de computación, como sitios web, bases de datos y aplicaciones de terceros. Las reglas predefinidas facilitan la transmisión de datos como archivos XML a través de cualquier red, ya que el destinatario puede usar esas reglas para leer los datos de forma precisa y eficiente.</p>
+
+        <h2 id="historia">Historia</h2>
+        <p>El XML proviene de un lenguaje que inventó IBM allá por los años 70. El lenguaje de IBM se llama GML (General Markup Language) y surgió por la necesidad que tenían en la empresa de almacenar grandes cantidades de información de temas diversos.</p>
+        <p>Imaginar por un momento la cantidad de documentación que generaría IBM sobre todas las áreas en las que trabajaba e investigaba, y la cantidad de información que habrá generado hasta hoy. Así pues, necesitaban una manera de guardar la información y los expertos de IBM se inventaron GML, un lenguaje con el que poder clasificarlo todo y escribir cualquier documento para que se pueda luego procesar adecuadamente.</p>
+        <p>Este lenguaje gustó mucho a la gente de ISO, una entidad que se encarga de normalizar cuantas cosas podáis imaginar para los procesos del mundo actual, de modo que allá por el 86 trabajaron para normalizar el lenguaje, creando el SGML, que no era más que el GML pero estándar (Standar en inglés).</p>
+        <p>SGML es un lenguaje muy trabajado, capaz de adaptarse a un gran abanico de problemas y a partir de él se han creado los siguientes sistemas para almacenar información.</p>
+        <p>Por el año 89, para el ámbito de la red Internet, un usuario que había conocido el lenguaje de etiquetas (Markup) y los hiperenlaces creo un nuevo lenguaje llamado HTML, que fue utilizado para un nuevo servicio de Internet, la Web. Este lenguaje fue adoptado rápidamente por la comunidad y varias organizaciones comerciales crearon sus propios visores de HTML y riñeron entre ellos para hacer el visor más avanzado, inventándose etiquetas como su propia voluntad les decía. Desde el 96 hasta hoy una entidad llamada W3C ha tratado de poner orden en el HTML y establecer sus reglas y etiquetas para que sea un estándar. Sin embargo el HTML creció de una manera descontrolada y no cumplió todos los problemas que planteaba la sociedad global de Internet.</p>
+        <p>El mismo W3C en el 98 empezó y continúa, en el desarrollo de XML (Extended Markup Language). En este lenguaje se ha pensado mucho más y muchas personas con grandes conocimientos en la materia están trabajando todavía en su gestación. Pretendían solucionar los carencias del HTML en lo que se respecta al tratamiento de la información.</p>
+
+        <h2 id="normas">Normas de Uso y Sintaxis</h2>
+        <p>En un documento XML, todos los nombres de los elementos son case sensitive, es decir, sensibles a letras minúsculas y mayúsculas, teniendo que cumplir las siguientes normas:</p>
+        <li>Pueden contener letras minúsculas, letras mayúsculas, números, puntos ".", guiones medios "-" y guiones bajos "_".</li>
+        <li>Asimismo, pueden contener el carácter dos puntos ":". No obstante, su uso se reserva para cuando se definan espacios de nombres.</li>
+        <li>El primer carácter tiene que ser una letra o un guion bajo "_".</li>
+        <p>Por otra parte, hay que tener en cuenta que, detrás del nombre de una etiqueta se permite escribir un espacio en blanco o un salto de línea. Por ejemplo, sintácticamente es correcto escribir:</p>
+        <code>&lt;ciudad&gt;Madrid&lt;/ciudad <br>&gt;</code></p>
+        <p>Ahora bien, no puede haber un salto de línea o un espacio en blanco antes del nombre de una etiqueta:</p>
+        <code>&lt;<br>ciudad&gt;Madrid&lt;/ciudad&gt;</code></p>
+        <h5>Ejemplo</h5>
+        <p><code>&lt;Ciudad&gt;Madrid&lt;/Ciudad&gt;</code></p>
+
+        <p><code>&lt;día&gt;18&lt;/día&gt;</code></p>
+
+        <p><code>&lt;mes&gt;6&lt;/mes&gt;</code></p>
+
+        <p><code>&lt;ciudad&gt;Madrid&lt;/ciudad&gt;</code></p>
+
+        <p><code>&lt;_rojo/&gt;</code></p>
+
+        <p><code>&lt;colores2&gt;Rojo y Naranja&lt;/colores2&gt;</code></p>
+
+        <p><code>&lt;Aficiones &gt;Cine, Bailar, Nadar&lt;/Aficiones &gt;</code></p>
+
+        <p><code>&lt;persona&gt;&lt;nombre&gt;Elsa&lt;/nombre&gt;&lt;/persona&gt;</code></p>
+
+        <p><code>&lt;color.favorito&gt;azul&lt;/color.favorito&gt;</code></p>
+
+       <p><code>&lt;color-favorito&gt;azul&lt;/color-favorito&gt;</code></p>
+
+        <p><code>&lt;color_favorito&gt;azul&lt;/color_favorito&gt;</code></p>
+
+
+        <h2 id="aplicaciones">Aplicaciones Empresariales</h2>
+        <p>XML se utiliza para facilitar la comunicación entre sistemas que pueden ser de diferentes proveedores o incluso de distintas épocas. Esto es vital para lograr la automatización de procesos y la integración fluida de datos en toda la organización. XML es la tecnología subyacente en miles de aplicaciones, que van desde herramientas de productividad comunes, como el procesamiento de textos hasta el software de publicación de libros e incluso sistemas de configuración de aplicaciones complejos.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">En este artículo</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#historia" class="btn d-block">Historia</a></li>
+              <li class="list-group-item"><a href="#normas" class="btn d-block">Normas de Uso y Sintaxis</a></li>
+              <li class="list-group-item"><a href="#aplicaciones" class="btn d-block">Aplicaciones Empresariales</a></li>
+              <li class="list-group-item"><a href="https://www.xml.com/" class="btn d-block">Web oficial de XML</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.toggle('d-none');
+    });
+  </script>
+</body>
+
+</html>
